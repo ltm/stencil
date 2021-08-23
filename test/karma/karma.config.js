@@ -82,6 +82,8 @@ module.exports = function (config) {
 
     browserStack: {
       project: 'stencil_core',
+      startTunnel: false,
+      localIdentifier: process.env.BROWSERSTACK_LOCAL_IDENTIFIER,
     },
 
     preprocessors: {
