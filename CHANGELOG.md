@@ -1,4 +1,40 @@
+# ⚡️ [2.9.0-0](https://github.com/ionic-team/stencil/compare/v2.8.1...v2.9.0-0) (2021-10-05)
+
+
+### Bug Fixes
+
+* **docs:** fix docs generation for method return values ([#3064](https://github.com/ionic-team/stencil/issues/3064)) ([dc2f6fb](https://github.com/ionic-team/stencil/commit/dc2f6fb64c4a48c2e1247de2c5411c5bcc10dfd4))
+* **output-targets:** restore stats output target ([#3030](https://github.com/ionic-team/stencil/issues/3030)) ([c76dca7](https://github.com/ionic-team/stencil/commit/c76dca7f2c01e73e1da691e45ba9c009724660d3))
+* **preamble:** restore preamble functionality ([#3085](https://github.com/ionic-team/stencil/issues/3085)) ([39caa8c](https://github.com/ionic-team/stencil/commit/39caa8cd0ff401c932eda2cc0b664ac533d2330a))
+
+
+### Features
+
+* **dist-custom-elements:** automatically import and define dependencies ([#3039](https://github.com/ionic-team/stencil/issues/3039)) ([6987e43](https://github.com/ionic-team/stencil/commit/6987e4321b9dfd10710aa27a55e53e983e867729))
+* **telemetry:** adding yarn 1 support, sanitizing data pre-flight ([#3082](https://github.com/ionic-team/stencil/issues/3082)) ([07f69cb](https://github.com/ionic-team/stencil/commit/07f69cb5b232333103cc4edaf3cf96bd36c2e8bc))
+
+
+
+## 🐱 [2.8.1](https://github.com/ionic-team/stencil/compare/v2.8.0...v2.8.1) (2021-09-15)
+
+### Bug Fixes
+
+* **runtime:** textContent for scoped components with slots ([#3047](https://github.com/ionic-team/stencil/issues/3047)) ([9fc7657](https://github.com/ionic-team/stencil/commit/9fc76579a3a3e1127ba43b354a572ac40eda3770))
+
+# 🎲 [2.8.0](https://github.com/ionic-team/stencil/compare/v2.7.1...v2.8.0) (2021-09-01)
+
+### Bug Fixes
+
+* **types:** add referrerPolicy to AnchorHTMLAttributes ([#3006](https://github.com/ionic-team/stencil/issues/3006)) ([4f7c073](https://github.com/ionic-team/stencil/commit/4f7c073311192c8601bcedcacc9e8daef2b349e3))
+* **docs:** update app-es5-disabled.ts message ([#2993](https://github.com/ionic-team/stencil/issues/2993)) ([4f7c073](https://github.com/ionic-team/stencil/commit/a6ebc51fd71a98898d99cde45c9e5a14585a44c7))
+
+### Features
+
+* **compiler:** allow disabling the injected hydration stylesheet ([#2989](https://github.com/ionic-team/stencil/issues/2989)) ([a3d2928](https://github.com/ionic-team/stencil/commit/a3d2928dbc31b786aa273020b88f09d107b05474))
+
 ## 🐔 [2.7.1](https://github.com/ionic-team/stencil/compare/v2.7-0...v2.7.1) (2021-08-24)
+
+### Bug Fixes
 
 * **ci:** vendor deno for builds ([#3020](https://github.com/ionic-team/stencil/issues/3020)) ([6d8a61d](https://github.com/ionic-team/stencil/commit/6d8a61d166859ca165d85b7c7cea35b99acc53ee))
 * **compiler:** solve issue where worker thread didn't have access to fetch ([#3012](https://github.com/ionic-team/stencil/issues/3012)) ([925d4e9](https://github.com/ionic-team/stencil/commit/925d4e924264df424c3519f4c0a91b22356a2ea6))

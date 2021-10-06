@@ -9,7 +9,7 @@ import { disconnectedCallback } from './disconnected-callback';
 import { doc, getHostRef, plt, registerHost, win, supportsShadow } from '@platform';
 import { hmrStart } from './hmr-component';
 import { HYDRATED_CSS, HYDRATED_STYLE_ID, PLATFORM_FLAGS, PROXY_FLAGS } from './runtime-constants';
-import { patchCloneNode, patchSlotAppendChild, patchChildSlotNodes } from './dom-extras';
+import { patchCloneNode, patchSlotAppendChild, patchChildSlotNodes, patchTextContent } from './dom-extras';
 import { proxyComponent } from './proxy-component';
 
 export const bootstrapLazy = (lazyBundles: d.LazyBundlesRuntimeData, options: d.CustomElementsDefineOptions = {}) => {
@@ -146,6 +146,10 @@ export const bootstrapLazy = (lazyBundles: d.LazyBundlesRuntimeData, options: d.
         };
       }
 
+      if (BUILD.scopedSlotTextContentFix) {
+        patchTextContent(HostElement.prototype, cmpMeta);
+      }
+
       cmpMeta.$lazyBundleId$ = lazyBundle[0];
 
       if (!exclude.includes(tagName) && !customElements.get(tagName)) {
@@ -158,7 +162,7 @@ export const bootstrapLazy = (lazyBundles: d.LazyBundlesRuntimeData, options: d.
     })
   );
 
-  if (BUILD.hydratedClass || BUILD.hydratedAttribute) {
+  if (BUILD.invisiblePrehydration && (BUILD.hydratedClass || BUILD.hydratedAttribute)) {
     visibilityStyle.innerHTML = cmpTags + HYDRATED_CSS;
     visibilityStyle.setAttribute('data-styles', '');
     head.insertBefore(visibilityStyle, metaCharset ? metaCharset.nextSibling : head.firstChild);

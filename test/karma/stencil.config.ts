@@ -13,11 +13,16 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'www',
+      empty: false,
       copy: [{ src: '**/*.html' }, { src: '**/*.css' }, { src: 'noscript.js' }],
     },
     {
       type: 'dist',
       dir: 'test-dist',
+    },
+    {
+      type: 'dist-custom-elements',
+      dir: 'test-components',
     },
   ],
   globalScript: 'test-app/global.ts',
@@ -31,6 +36,7 @@ export const config: Config = {
     dynamicImportShim: true,
     lifecycleDOMEvents: true,
     safari10: true,
+    scopedSlotTextContentFix: true,
     scriptDataOpts: true,
     shadowDomShim: true,
     slotChildNodesFix: true,
